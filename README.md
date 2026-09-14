@@ -1,78 +1,39 @@
 # OpenAxies
 
-An autonomous coding agent for your terminal.
+An autonomous coding agent for your terminal. Understands codebases, writes files, runs commands, searches the web, and iterates on tasks through a chat interface.
 
-## Install
+**9 providers supported.** OpenAxies Z (free, no key needed), Groq, Google Gemini, Claude, DeepSeek, OpenAI, Mistral, xAI Grok, OpenRouter, Ollama.
+
+## Quick Start
 
 ```bash
 npm install -g openaxies
 openaxies
 ```
 
-Or run without installing:
+Select **OpenAxies Z** as provider — zero setup, no API key required.
 
-```bash
-npx openaxies
-```
+## Documentation
 
-**Requirements:** Node.js >= 18
+- [Installation](docs/install.md) — Install and first run
+- [Providers](docs/providers.md) — All 9 providers and API key setup
+- [Configuration](docs/configuration.md) — Config file, options, named keys
+- [Tools](docs/tools.md) — 38 built-in tools reference
+- [Modes](docs/modes.md) — Build, Plan, and Ask modes
+- [CLI Reference](docs/cli-reference.md) — Commands, keybindings, slash commands
+- [Security](docs/security.md) — Permissions, safety, data privacy
+- [Troubleshooting](docs/troubleshooting.md) — Common issues and fixes
 
-## Quick Start
+## Features
 
-```bash
-openaxies
-```
-
-Select **OpenAxies Z** as provider — free, no API key needed.
-
-Or use your own key:
-
-```bash
-export OPENAXIES_GROQ_KEY=gsk_your_key_here
-openaxies
-```
-
-Press `Ctrl+P` to add API keys interactively.
-
-## Providers
-
-| Provider | Free? |
-|---|---|
-| OpenAxies Z | Yes |
-| Groq | Yes |
-| Google Gemini | Yes |
-| Claude | No |
-| DeepSeek | No |
-| OpenAI | No |
-| Mistral | No |
-| xAI Grok | No |
-| OpenRouter | No |
-| Ollama | Yes (local) |
-
-## Key Bindings
-
-| Key | Action |
-|---|---|
-| `Enter` | Send message |
-| `Ctrl+P` | Provider/model config |
-| `Ctrl+R` | Resend last message |
-| `Ctrl+L` | Clear conversation |
-| `Tab` | Toggle mode (build/plan) |
-| `Esc` | Cancel request |
-| `/` | Command palette |
-
-## Modes
-
-- **build** — full tool access (read, write, execute, search)
-- **plan** — read-only tools
-
-## Safety
-
-Risky operations prompt for permission:
-
-- **ask** (default) — prompts before each action
-- **allow_all** — auto-approves
-- **deny_all** — blocks all
+- **Streaming** — Tokens appear as they arrive, not buffered
+- **Tool calling** — 38 tools: filesystem, search, execution, memory, skills, web search
+- **Thinking models** — Reasoning display for Groq, Gemini, DeepSeek, Claude, OpenAI, xAI
+- **Persistent memory** — SQLite-backed, survives restarts
+- **Reusable skills** — Save and execute workflows
+- **Permission system** — Ask, allow_all, deny_all for risky operations
+- **Multi-key rotation** — Automatic fallback with cooldown on rate limits
+- **Session management** — Save, load, browse chat history
 
 ## License
 
